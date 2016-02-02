@@ -1,0 +1,35 @@
+<h1>NEW COUNTDOWN</h1>
+
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: name %>
+<% end -%>
+
+<%= form_tag counts_start_path, method: "post"  do %>
+  <%= hidden_field_tag :name, 'count1' %>
+  <%= text_field_tag :time %>
+  <%= submit_tag "Start" %>
+<% end %>
+<%= form_tag counts_stop_path, method: "post"  do %>
+  <%= hidden_field_tag 'name', 'count1' %>
+  <%= submit_tag "Stop" %>
+<% end %>
+<%= form_tag counts_resume_path, method: "post"  do %>
+  <%= hidden_field_tag 'name', 'count1' %>
+  <%= submit_tag "Resume" %>
+<% end %>
+
+<br /> <br />
+
+<%= form_tag counts_start_path, method: "post"  do %>
+  <%= hidden_field_tag :name, 'count2' %>
+  <%= text_field_tag :time %>
+  <%= submit_tag "Start" %>
+<% end %>
+<%= form_tag counts_stop_path, method: "post"  do %>
+  <%= hidden_field_tag 'name', 'count2' %>
+  <%= submit_tag "Stop" %>
+<% end %>
+<%= form_tag counts_resume_path, method: "post"  do %>
+  <%= hidden_field_tag 'name', 'count2' %>
+  <%= submit_tag "Resume" %>
+<% end %>
