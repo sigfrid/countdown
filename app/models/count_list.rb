@@ -12,8 +12,4 @@ class CountList
   def add(count)
     @counts[count.name] = count
   end
-
-  def reset
-    @counts = {}
-  end
 end
