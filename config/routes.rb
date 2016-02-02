@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   post '/counts/start', to: 'counts#start'
   post '/counts/stop', to: 'counts#stop'
   post '/counts/resume', to: 'counts#resume'
+  post '/counts/collected', to: 'counts#collected'
 end

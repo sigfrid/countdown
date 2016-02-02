@@ -18,6 +18,11 @@
   <%= submit_tag "Resume" %>
 <% end %>
 
+<%= form_tag counts_collected_path, method: "post"  do %>
+  <%= hidden_field_tag 'name', 'count1' %>
+  <%= submit_tag "COLLECTED" %>
+<% end %>
+
 <br /> <br />
 
 <%= form_tag counts_start_path, method: "post"  do %>

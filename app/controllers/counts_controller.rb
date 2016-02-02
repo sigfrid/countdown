@@ -26,4 +26,12 @@ class CountsController < ApplicationController
     flash.now[:notice] = "RESUME Request completed at #{Time.now} - count is #{count.name}"
     render :action => 'new'
   end
+
+  def collected
+    count = CountList.instance.counts[params[:name]]
+    count.collected
+
+    flash.now[:notice] = "COLLECTED Request completed at #{Time.now} - count is #{count.name}"
+    render :action => 'new'
+  end
 end
